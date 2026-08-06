@@ -314,6 +314,24 @@ body{
   color:#fff;
 }
 
+.taac-detail.upi-highlight{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:13px 16px;
+  border:1px solid rgba(92,228,246,.45);
+  border-radius:12px;
+  background:rgba(92,228,246,.1);
+  box-shadow:0 0 0 1px rgba(92,228,246,.08) inset;
+}
+
+.taac-detail.upi-highlight strong{
+  color:#8be0fa;
+  font-size:14px;
+  letter-spacing:.2px;
+}
+
 .taac-payment-note{
   padding:13px;
   border-left:3px solid #5cd7f6;
@@ -421,7 +439,7 @@ body{
   method="POST"
 >
 <input type="hidden" name="oid" value="00DdN00000rM2SB">
-<input type="hidden" name="retURL" value="https://akanksha-rajendra-jadhav.github.io/registration-confirmation/">
+<input type="hidden" name="retURL" value="confirmation.html">
 <input type="hidden" name="lead_source" value="Web">
 <input type="hidden" name="title" value="TAAC Event Antendee">
 
@@ -519,7 +537,7 @@ body{
 <div class="taac-payment-card">
 <div class="taac-step-header">
 <h2>Complete Your Registration – Payment of ₹200</h2>
-<p>Pay ₹200 using the QR code or an alternative payment method below. After payment, enter your transaction ID / UTR </p>
+<p>Pay ₹200 using the QR code or an alternative payment method below. After payment, enter your transaction ID / UTR and upload the payment screenshot.</p>
 </div>
 
 <div class="taac-amount"><span>Registration Fee</span><strong>₹200</strong></div>
@@ -531,8 +549,8 @@ body{
 
 <h3>Alternative Payment Methods</h3>
 <div class="taac-payment-details">
-<div class="taac-detail" style="background-color: #5ecadd;"><strong>UPI ID: ideaclicks-pmt@ibl</strong> </div>
-<div class="taac-detail" style="background-color: #5ecadd;"><strong>UPI No: +91 9890 979 074</strong></div>
+<div class="taac-detail upi-highlight"><strong>UPI ID: ideaclicks-pmt@ibl</strong></div>
+<div class="taac-detail upi-highlight"><strong>UPI No: +91 9890 979 074</strong></div>
 <!-- <div class="taac-detail"><strong>Account Name:</strong> IdeaClicks</div> -->
 <!-- <div class="taac-detail"><strong>Bank Name:</strong> HDFC Bank</div> -->
 <!-- <div class="taac-detail"><strong>Branch:</strong> Bhusari Colony, Paud Road</div> -->
