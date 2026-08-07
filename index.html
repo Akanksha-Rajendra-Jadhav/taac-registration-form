@@ -613,6 +613,32 @@ document.querySelector(".taac-form").addEventListener("submit",function(e){
     "TAAC Registration Payment | Amount: ₹199 | Transaction ID / UTR: " +
     t + " | Payment Status: Unpaid - Pending Manual Verification";
 });
+// Transaction validation and popup msg
+  
+document.querySelector(".taac-form").addEventListener("submit", function(e) {
+
+    const txn = document.getElementById("00NdN00000ZSrNt").value.trim();
+
+    if (txn === "") {
+        e.preventDefault();
+        alert("❌ Please enter your UPI Transaction ID.");
+        return;
+    }
+
+    if (txn.length < 12 || txn.length > 35) {
+        e.preventDefault();
+        alert("❌ Invalid Transaction ID.\nPlease check your payment app and enter the correct UPI Transaction ID.");
+        return;
+    }
+
+    if (!/^[A-Za-z0-9]+$/.test(txn)) {
+        e.preventDefault();
+        alert("❌ Transaction ID should contain only letters and numbers.");
+        return;
+    }
+});
+
+  
 </script>
 
 
